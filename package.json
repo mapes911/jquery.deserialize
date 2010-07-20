@@ -1,0 +1,16 @@
+{
+	"name": "jquery.deserialize",
+	"author": {
+		"name": "Dawid Fatyga",
+		"email": "dawid.fatyga@gmail.com",
+	},
+	"url": "http://github.com/dejw/jquery.deserialize",
+	"license": {
+		"name": "BSD",
+		"url": "http://www.opensource.org/licenses/bsd-license.php"
+	},
+	"description": "Simple jQuery plugin for form deserialization.",
+	"keywords": [ "form", "deserialization", "jquery" ],
+	"lib": "jquery.deserialize"
+}
+
