@@ -32,6 +32,9 @@ $.fn.deserialize = function(s, options) {
 
 	callback = options.callback
 	callback_on = options.callback_on || false
+	if(callback_on)
+		callback_on = callback_on.toHash()
+
 
 	for (var i = 0; i < data.length; i++) {
 		var pair = decodeURIComponent(data[i]).split("=")
@@ -39,7 +42,7 @@ $.fn.deserialize = function(s, options) {
 		var value = pair[1]
 		if(except != _name in names){
 			$("[" + attr + "='" + _name + "']", this).val(value)
-			if(callback && (callback_on === false || _name in callback_on)){
+			if(callback && ((!callback_on) || (_name in callback_on))){
 				callback(_name, value)
 			}
 		}

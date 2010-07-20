@@ -45,4 +45,5 @@ _See `demo.html` for some examples._
  * allow to pass JSON objects as data for deserialization
  * `except`, `only` and `callback_on` options should accept regular expressions
  * add more examples to reflect all possible options
+ * add possibility to chage the way the fields are matched
 
