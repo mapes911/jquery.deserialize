@@ -38,8 +38,9 @@ $.fn.deserialize = function(s, options) {
 
 	for (var i = 0; i < data.length; i++) {
 		var pair = decodeURIComponent(data[i]).split("=")
-		var _name = pair[0]
-		var value = pair[1]
+		var _name = pair[0];
+		var value = pair[1];
+		value = value.replace(/[+]/g,' '); 
 		if(except != _name in names){
 			$("[" + attr + "='" + _name + "']", this).val(value)
 			if(callback && ((!callback_on) || (_name in callback_on))){
